@@ -1,0 +1,325 @@
+@import "tailwindcss";
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --sidebar: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+.dark {
+  /* Dark mode variables */
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+  --sidebar: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 224.3 76.3% 94.1%;
+  --sidebar-primary-foreground: 220.9 39.3% 11%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  min-height: 100vh;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/*  TARGETED TEXT  */
+.dark .text-muted-foreground,
+.dark .text-gray-500,
+.dark .text-gray-600,
+.dark .text-slate-500,
+.dark .text-slate-400,
+.dark .text-slate-600,
+.dark .text-zinc-500,
+.dark .text-neutral-500 {
+  color: hsl(215 20.2% 65.1%) !important;
+}
+
+.dark .text-gray-700,
+.dark .text-slate-700,
+.dark .text-zinc-700,
+.dark .text-neutral-700 {
+  color: hsl(210 40% 90%) !important;
+}
+
+.dark .text-gray-800,
+.dark .text-slate-800,
+.dark .text-zinc-800,
+.dark .text-neutral-800,
+.dark .text-gray-900,
+.dark .text-slate-900,
+.dark .text-zinc-900,
+.dark .text-neutral-900 {
+  color: hsl(210 40% 98%) !important;
+}
+
+/* Fix for any remaining invisible text */
+.dark .text-current {
+  color: inherit !important;
+}
+
+/* Specific component text fixes */
+.dark .text-sm:not(.text-white):not(.text-black):not([class*="text-"]),
+.dark .text-xs:not(.text-white):not(.text-black):not([class*="text-"]) {
+  color: hsl(215 20.2% 65.1%) !important;
+}
+
+.dark .text-lg:not(.text-white):not(.text-black):not([class*="text-"]),
+.dark .text-xl:not(.text-white):not(.text-black):not([class*="text-"]),
+.dark .text-2xl:not(.text-white):not(.text-black):not([class*="text-"]),
+.dark .text-3xl:not(.text-white):not(.text-black):not([class*="text-"]),
+.dark .text-4xl:not(.text-white):not(.text-black):not([class*="text-"]) {
+  color: hsl(210 40% 98%) !important;
+}
+
+.dark .CardDescription,
+.dark [class*="description"],
+.dark [class*="label"] {
+  color: hsl(215 20.2% 65.1%) !important;
+}
+
+/* Input placeholder text */
+.dark ::placeholder {
+  color: hsl(215 20.2% 65.1%) !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder,
+.dark select::placeholder {
+  color: hsl(215 20.2% 65.1%) !important;
+}
+
+.dark span:not([class*="text-"]),
+.dark p:not([class*="text-"]),
+.dark div:not([class*="text-"]) {
+  color: inherit !important;
+}
+
+.dark .bg-background { background-color: hsl(222.2 84% 4.9%) !important; }
+.dark .bg-card { background-color: hsl(222.2 84% 4.9%) !important; }
+.dark .bg-popover { background-color: hsl(222.2 84% 4.9%) !important; }
+.dark .bg-secondary { background-color: hsl(217.2 32.6% 17.5%) !important; }
+.dark .bg-muted { background-color: hsl(217.2 32.6% 17.5%) !important; }
+.dark .bg-accent { background-color: hsl(217.2 32.6% 17.5%) !important; }
+.dark .bg-sidebar { background-color: hsl(240 5.9% 10%) !important; }
+
+.dark .text-foreground { color: hsl(210 40% 98%) !important; }
+.dark .text-card-foreground { color: hsl(210 40% 98%) !important; }
+.dark .text-popover-foreground { color: hsl(210 40% 98%) !important; }
+.dark .text-primary { color: hsl(210 40% 98%) !important; }
+.dark .text-primary-foreground { color: hsl(222.2 47.4% 11.2%) !important; }
+.dark .text-secondary-foreground { color: hsl(210 40% 98%) !important; }
+.dark .text-muted-foreground { color: hsl(215 20.2% 65.1%) !important; }
+.dark .text-accent-foreground { color: hsl(210 40% 98%) !important; }
+.dark .text-sidebar-foreground { color: hsl(240 4.8% 95.9%) !important; }
+
+.dark .border-border { border-color: hsl(217.2 32.6% 17.5%) !important; }
+.dark .border-sidebar-border { border-color: hsl(240 3.7% 15.9%) !important; }
+
+.dark .bg-white { background-color: hsl(222.2 84% 4.9%) !important; }
+.dark .bg-slate-50 { background-color: hsl(222.2 84% 4.9%) !important; }
+.dark .bg-slate-100 { background-color: hsl(217.2 32.6% 17.5%) !important; }
+
+.dark .text-slate-800 { color: hsl(210 40% 98%) !important; }
+.dark .text-slate-600 { color: hsl(215 20.2% 65.1%) !important; }
+.dark .text-slate-900 { color: hsl(210 40% 98%) !important; }
+
+.dark .bg-blue-100 { background-color: hsl(217.2 32.6% 17.5%) !important; }
+.dark .bg-green-100 { background-color: hsl(217.2 32.6% 17.5%) !important; }
+.dark .bg-red-100 { background-color: hsl(217.2 32.6% 17.5%) !important; }
+.dark .bg-yellow-100 { background-color: hsl(217.2 32.6% 17.5%) !important; }
+
+.dark .text-blue-800 { color: hsl(210 40% 98%) !important; }
+.dark .text-green-800 { color: hsl(210 40% 98%) !important; }
+.dark .text-red-800 { color: hsl(210 40% 98%) !important; }
+.dark .text-yellow-800 { color: hsl(210 40% 98%) !important; }
+
+/* Gradient backgrounds */
+.dark .bg-gradient-to-br\.from-slate-50\.to-slate-100 {
+  background: linear-gradient(to bottom right, hsl(222.2 84% 4.9%), hsl(217.2 32.6% 17.5%)) !important;
+}
+
+.dark .bg-white\/80 {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+}
+.dark .bg-slate-900\/80 {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+}
+
+.dark .recharts-text {
+  fill: hsl(210 40% 98%) !important;
+}
+
+.dark .border-slate-200 {
+  border-color: hsl(217.2 32.6% 17.5%) !important;
+}
+.dark .border-slate-800 {
+  border-color: hsl(217.2 32.6% 17.5%) !important;
+}
+
+.bg-blue-500 { background-color: #3b82f6 !important; }
+.bg-green-500 { background-color: #10b981 !important; }
+.bg-orange-500 { background-color: #f59e0b !important; }
+.bg-purple-500 { background-color: #8b5cf6 !important; }
+.bg-gray-500 { background-color: #6b7280 !important; }
+
+/* Dark mode progress bars */
+.dark .bg-blue-500 { background-color: #60a5fa !important; }
+.dark .bg-green-500 { background-color: #34d399 !important; }
+.dark .bg-orange-500 { background-color: #fbbf24 !important; }
+.dark .bg-purple-500 { background-color: #a78bfa !important; }
+.dark .bg-gray-500 { background-color: #9ca3af !important; }
+
+.bg-green-500 { background-color: #10b981 !important; }
+.bg-red-500 { background-color: #ef4444 !important; }
+.bg-green-100 { background-color: #dcfce7 !important; }
+.bg-red-100 { background-color: #fee2e2 !important; }
+.bg-green-50 { background-color: #f0fdf4 !important; }
+.bg-red-50 { background-color: #fef2f2 !important; }
+
+.text-green-500 { color: #10b981 !important; }
+.text-red-500 { color: #ef4444 !important; }
+.text-green-800 { color: #166534 !important; }
+.text-red-800 { color: #991b1b !important; }
+.text-green-600 { color: #059669 !important; }
+.text-red-600 { color: #dc2626 !important; }
+
+/* Dark mode sentiment colors */
+.dark .bg-green-500 { background-color: #34d399 !important; }
+.dark .bg-red-500 { background-color: #f87171 !important; }
+.dark .bg-green-100 { background-color: #064e3b !important; }
+.dark .bg-red-100 { background-color: #7f1d1d !important; }
+.dark .bg-green-50 { background-color: #052e16 !important; }
+.dark .bg-red-50 { background-color: #450a0a !important; }
+
+.dark .text-green-500 { color: #34d399 !important; }
+.dark .text-red-500 { color: #f87171 !important; }
+.dark .text-green-800 { color: #a7f3d0 !important; }
+.dark .text-red-800 { color: #fecaca !important; }
+.dark .text-green-600 { color: #6ee7b7 !important; }
+.dark .text-red-600 { color: #fca5a5 !important; }
+
+.bg-yellow-50 { background-color: #fefce8 !important; }
+.bg-blue-50 { background-color: #eff6ff !important; }
+.bg-red-50 { background-color: #fef2f2 !important; }
+
+.border-yellow-200 { border-color: #fef08a !important; }
+.border-blue-200 { border-color: #bfdbfe !important; }
+.border-red-200 { border-color: #fecaca !important; }
+
+.text-yellow-600 { color: #d97706 !important; }
+.text-blue-600 { color: #2563eb !important; }
+.text-red-600 { color: #dc2626 !important; }
+
+.text-yellow-800 { color: #92400e !important; }
+.text-blue-800 { color: #1e40af !important; }
+.text-red-800 { color: #991b1b !important; }
+
+/* Dark mode alert cards */
+.dark .bg-yellow-50 { background-color: #451a03 !important; }
+.dark .bg-blue-50 { background-color: #172554 !important; }
+.dark .bg-red-50 { background-color: #450a0a !important; }
+
+.dark .border-yellow-200 { border-color: #854d0e !important; }
+.dark .border-blue-200 { border-color: #1e40af !important; }
+.dark .border-red-200 { border-color: #991b1b !important; }
+
+.dark .text-yellow-600 { color: #fbbf24 !important; }
+.dark .text-blue-600 { color: #60a5fa !important; }
+.dark .text-red-600 { color: #f87171 !important; }
+
+.dark .text-yellow-800 { color: #fef3c7 !important; }
+.dark .text-blue-800 { color: #dbeafe !important; }
+.dark .text-red-800 { color: #fecaca !important; }
+
+.bg-blue-600 { background-color: #2563eb !important; }
+.bg-blue-400 { background-color: #60a5fa !important; }
+
+.dark .bg-blue-600 { background-color: #3b82f6 !important; }
+.dark .bg-blue-400 { background-color: #93c5fd !important; }
+
+/* Recharts dark mode support */
+.dark .recharts-text {
+  fill: hsl(210 40% 98%) !important;
+}
+
+.dark .recharts-tooltip-wrapper {
+  background-color: hsl(222.2 84% 4.9%) !important;
+  border-color: hsl(217.2 32.6% 17.5%) !important;
+}
+
+.dark .recharts-default-tooltip {
+  background-color: hsl(222.2 84% 4.9%) !important;
+  border-color: hsl(217.2 32.6% 17.5%) !important;
+  color: hsl(210 40% 98%) !important;
+}
+
+/* .tooltip-content {
+  color: #fff !important;
+  background: #222 !important;
+}
+.chart-container {
+  width: 100%;
+  height: 300px;
+  min-height: 300px;
+}
+
+.recharts-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+} */
